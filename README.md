@@ -20,6 +20,14 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+### Gitpod Setup
+
+1. Click the button below to open this project in Gitpod.
+
+2. This will open a fully configured workspace in your browser with all the necessary dependencies already installed.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/jslovers/jslovers-official-website)
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -34,11 +42,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 Please follow the coding standards and guidelines specific to the "JSLovers" project. If you're unsure about any coding standards, or ask for clarification in your pull request or by reaching out to maintainers.
 
 For additional guidance, please refer to the project's contributing guidelines:
-[Contributing Guidelines](<./CONTRIBUTING.md>)
+[Contributing Guidelines](./CONTRIBUTING.md)
 
 ## JSLovers Discord Server
 
-Check out: [JSLover Discord Server Link](<https://discord.com/invite/89QtcRw>)
+Check out: [JSLover Discord Server Link](https://discord.com/invite/89QtcRw)
 
 ## JSLovers Figma Design
 
