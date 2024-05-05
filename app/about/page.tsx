@@ -5,6 +5,7 @@ import SpeakerCard from "@/components/SpeakerCard";
 import { ABOUT } from "@/config/about";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Carousel from "../test/Carousel";
 
 const AboutPage = () => {
   return (
@@ -108,27 +109,34 @@ const AboutPage = () => {
 
         <div className="w-full flex flex-col gap-4 lg:flex-row-reverse lg:gap-11 items-center">
           <div className="px-4 overflow-x-auto snap-x max-w-full flex gap-7 py-5 lg:w-[50%]">
-            {ABOUT.About.story.images.map((image, i) => (
-              <div
-                key={i}
-                className="scroll-ml-6 snap-center inline-flex flex-shrink-0 flex-col items-center gap-2 lg:items-start lg:mx-auto"
-              >
-                <div className="relative mb-3 mr-3 p-8 border-[5px] border-solid border-black rounded-[10px] flex flex-col items-center justify-center">
-                  <Image
-                    src={image}
-                    width={381}
-                    height={226}
-                    alt="Speaker Image"
-                    className="object-cover w-[250px] h-[148px] lg:w-[381px] lg:h-[226px] rounded-[10px]"
-                    loading="lazy"
-                  />
+            <Carousel loop>
+              {ABOUT.About.story.images.map((src, i) => {
+                return (
+                  <div className="relative h-auto flex-[0_0_100%]" key={i}>
+                    <div
+                      key={i}
+                      className="scroll-ml-6 snap-center flex flex-shrink-0 flex-col items-center gap-2"
+                    >
+                      <div className="relative pb-3 pr-3 rounded-[10px] border-[5px] rounded-tr-none rounded-bl-none border-l-0 border-t-0 border-solid border-black">
+                        <div className="h-3 absolute top-0 right-0 outline outline-[6px] outline-white" />
+                        <div className="w-3 absolute bottom-0 left-0 outline outline-[6px] outline-white" />
 
-                  <div className="-z-[1] absolute top-[12px] left-[12px] p-8 rounded-[10px] border-[5px] rounded-tr-none rounded-bl-none border-l-0 border-t-0 border-solid border-black">
-                    <div className="w-[250px] h-[148px] lg:w-[381px] lg:h-[226px]" />
+                        <div className="p-8 border-[5px] border-solid border-black rounded-[10px] flex flex-col items-center justify-center">
+                          <Image
+                            src={src}
+                            width={381}
+                            height={226}
+                            alt="Speaker Image"
+                            className="w-[250px] lg:w-[381px] rounded-[10px]"
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                );
+              })}
+            </Carousel>
           </div>
 
           <div className="container lg:px-0 flex flex-col items-center gap-1 lg:gap-3 lg:w-[50%]">
