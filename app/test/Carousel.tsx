@@ -23,7 +23,7 @@ const Dots = ({ itemsLength, selectedIndex }: DotsProps) => {
   const arr = new Array(itemsLength).fill(null);
   return (
     <>
-      <div className="flex gap-2 my-4 justify-center">
+      <div className="flex gap-2 mt-4 justify-center">
         {arr.map((_, index) => (
           <div
             className={classNames(
